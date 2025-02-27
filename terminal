@@ -1,0 +1,17 @@
+npx react-native@latest init LawBooksLibrary
+cd LawBooksLibrary 
+npm install @react-navigation/native @react-navigation/stack @react-navigation/bottom-tabs
+npm install react-native-screens react-native-safe-area-context
+npm install react-native-vector-icons
+npm install @react-native-async-storage/async-storage 
+npm install @types/react-native @types/react-native-vector-icons --save-dev
+cd ios
+pod install
+cd .. 
+npx react-native run-ios 
+npx react-native run-android 
+mkdir -p src/screens
+touch src/screens/BookDetailsScreen.tsx src/screens/SearchScreen.tsx src/screens/BookmarksScreen.tsx 
+npm run build
+# or
+npm start -- --reset-cache 
